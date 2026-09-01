@@ -9,4 +9,4 @@ fs.copyFileSync(
   path.join(dist, "app.js")
 );
 
-console.log("Build concluído: arquivo copiado para a pasta dist.");
+console.log("Build concluída: arquivo copiado para a pasta dist.");
