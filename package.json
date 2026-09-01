@@ -1,0 +1,13 @@
+{
+  "name": "primeiro-pipeline-ci-cd",
+  "version": "1.0.0",
+  "description": "Projeto simples para demonstrar CI/CD com GitHub Actions",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "build": "node build.js"
+  },
+  "devDependencies": {
+    "jest": "^30.0.0"
+  }
+}

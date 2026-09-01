@@ -1,0 +1,38 @@
+name: CI/CD - Primeiro Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout do código
+      - name: 1 - Checkout do código
+        uses: actions/checkout@v4
+
+      # 2. Instalação de dependências
+      - name: 2 - Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: 2 - Instalar dependências
+        run: npm install
+
+      # 3. Testes
+      - name: 3 - Executar testes
+        run: npm test
+
+      # 4. Build
+      - name: 4 - Fazer build
+        run: npm run build
+
+      # 5. Deploy simulado
+      - name: 5 - Deploy simulado
+        run: echo "Deploy realizado com sucesso!"
