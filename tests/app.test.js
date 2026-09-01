@@ -1,5 +1,5 @@
 const { somar } = require("../app");
 
 test("deve somar dois números corretamente", () => {
-  expect(somar(2, 3)).toBe(5);
+  expect(somar(4, 5)).toBe(9);
 });
