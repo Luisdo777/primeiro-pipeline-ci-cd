@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       # 1. Checkout do código
       - name: 1 - Checkout do código
         uses: actions/checkout@v4
@@ -19,8 +20,7 @@ jobs:
       - name: 2 - Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: npm
+          node-version: 22
 
       - name: 2 - Instalar dependências
         run: npm install
